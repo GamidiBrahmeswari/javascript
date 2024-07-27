@@ -1,0 +1,191 @@
+
+console.log(10 + 10); 
+	20(+ is a arithmetic operator)    
+console.log(10 + "10"); 
+	1010(in addition,concatenation will done when if there is string)
+console.log(10 + +"10");  
+	20(+ operator before a string convert the string to a number )
+console.log(10+"10"+10);  
+	101010(in addition,concatenation will done)
+console.log(10+ +"10" + 10);
+	30(+ operator before a string convert the string to a number )
+console.log(10 - "2");
+	8(concatenation only for + operator)
+console.log(10 - "2" - "8");
+	0((concatenation only for + operator))
+console.log(10+"2" - "2");
+	100(first concatenation will done then it operates -)
+console.log(10>9>8);
+	false(first condition true and compare the condition with 8 its false)
+console.log(10 * "10");
+	100(*operator)
+console.log(100 / "100");
+	1(arithmetic operator)
+console.log(100/"0");
+infinity
+console.log(100 + +"100" - "100" * "100");
+	-9800(first *operator will done in BODMAS)
+console.log(1 == "1");
+	true(values are same)
+console.log(1 === "1");
+	false(datatypes are different)
+console.log(1 == "one"); false(values are different)
+
+
+console.log(1 === "one");
+	false(different data types)
+console.log(1+true);
+	2(true means 1)
+console.log(1 - true);
+	0(true means 1)
+console.log(1 + true - false);
+	2(true is 1 and false is 0)
+console.log("1" + true);
+	1true(concatenation will done)
+console.log(+"1" + true);
+	2(1 is a string + operation is done here)
+console.log(undefined == undefined);
+	true(both values are same)
+console.log(undefined === undefined);
+	true(both datatypes are same)
+console.log(null == null);
+	true(values are same)
+console.log(null === null);
+	true(datatypes are same)
+console.log(undefined == null);
+	true(both are nothing)
+console.log(undefined === null);
+	false(different datatypes)
+console.log(2+NaN);
+	NaN(any arithmetic operator with NaN results NaN)
+console.log("2"+NaN);
+	2NaN(concatenation)
+	
+console.log("2"+undefined);
+	2undefined(concatenation)
+console.log(2+undefined);
+	NaN(adding number with undefined will results NaN)
+console.log(typeof "123");
+	string(type of number is string)
+console.log(typeof 2);
+	number(type of 2 is number)	
+console.log(typeof true);
+	Boolean(true is Boolean type)
+console.log(typeof undefined);
+	undefined(undefined is a undefined type)
+console.log(typeof null);
+	object(null is a object type)
+console.log(typeof []);
+	object
+console.log(typeof 1n);
+	bigint(n is bigint type)	
+console.log(typeof 1n+2n);
+	bigint2(typeof 1n is bigint and add +)
+console.log(typeof 1+2n);
+	number2(typeof 1 is number and add 2)
+console.log(typeof 1/1n);
+	type error(cannot mix bigint and other types)
+
+
+…………………………………………………              ………………………………………………………….
+
+
+1.	What is the value of x after the operation: x = 5 + 3 * 2;?
+11(first multiplication)
+
+2.	What is the value of y after the operation: y = 12 - 4 / 2;?
+10       
+
+3.	What is the value of z after the operation: z = 7 + 2 * 3 - 1;?
+12
+4.	What is the value of a after the operation: a = 9 % 3 + 2;?
+         2
+5. What is the value of b after the operation: b = 15 / 3 * 2;?
+	10
+5.	What is the value of c after the operation: c = 24 >> 2;?
+6
+6.	What is the value of d after the operation: d = 17 & 3;?
+1
+7.	What is the value of e after the operation: e = 28 ^ 2;?
+30
+9. What is the value of f after the operation: f = 11 + 3 << 2;?
+	56
+
+10. What is the value of g after the operation: g = 25 - 5 | 3;?
+	23
+……………………………………………………….             ……………………………………………………………
+
+
+1. What is the value of granted after the operation:
+
+let username = "admin";
+let password = "password";
+let granted = (username === "admin" && password === "password") ? true : false;
+	true((true&&true)?true:false)
+1.	What is the value of message after the operation:
+
+
+let username = "user";
+let password = "wrongpassword";
+let message = (username === "admin" && password === "password") ? "Login successful!" : "Invalid credentials.";
+
+     Invalid credentials
+
+1. What is the value of access after the operation:
+
+let username = "admin";
+let password = "password";
+let access = (username === "admin" || password === "password") ? "Granted" : "Denied";
+     granted
+
+1. What is the value of status after the operation:
+
+let username = "";
+let password = "password";
+let status = (username !== "" && password === "password") ? "Logged in" : "Please enter username and password";
+	Please enter username and password
+
+
+1. What is the value of authenticated after the operation:
+
+let username = "admin";
+let password = "wrongpassword";
+let authenticated = (username === "admin" && password === "password") ? true : false;
+	false
+
+Think you can solve them? Give it a try..!!
+
+1. What is the value of name after the operation:
+
+let user = { name: "John" };
+let name = user?.name ?? "Unknown";
+	john(here optional chaining and nullish operator is there so  here name value is assigned so the output be the name)
+
+1. What is the value of price after the operation:
+
+let product = { price: null };
+let price = product?.price ?? "N/A";
+	N/A(here optional chaining and nullish operator is there so  here name value is assigned as null so the output N/A)
+
+
+
+1. What is the value of address after the operation:
+
+let customer = { address: { street: "123 Main St" } };
+let address = customer?.address?.street ?? "Not available";
+	123 Main st(here optional chaining and nullish operator is there so  here name value is assigned  so the output 123 MAIN ST)
+
+
+1. What is the value of phone after the operation:
+
+let contact = { phone: null };
+let phone = contact?.phone ?? "Not provided";
+	Not provided
+
+1. What is the value of description after the operation:
+
+let item = { description: "" };
+let description = item?.description ?? "No description available";
+	empty(here description Is assigned as empty not null or undefined so it output display as empty)
+
+Think you can solve them? Give it a try..!

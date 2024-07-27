@@ -1,0 +1,160 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+        padding: 0%;
+        margin: 0%;
+        background-image: url("https://as2.ftcdn.net/v2/jpg/08/14/55/61/1000_F_814556127_hRBHuex22BC4WsnDtfKvAsHEK4vkNk7d.jpg");
+    }
+
+    #container{
+        /* border:1px solid; */
+        margin-top: 5%;
+        background-image: url("");
+         padding:10%;
+        width:50%;
+        height:80vh;
+        margin-left:25%;
+        
+
+    }
+    #timedisplay{
+       /* border: 1px solid black; */
+       /* border-radius: 100%; */
+       
+       box-shadow: 5px  10px 10px  rgb(118, 44, 44);
+       width:100%;
+       height:30vh;
+       color: white;
+       font-size: 30px;
+       display:flex;
+       justify-content: center;
+       align-items: center;
+        
+    }
+    #buttonbox{
+      
+        
+        display:flex;
+        justify-content: center;
+        justify-content: space-between;
+       
+        
+    }
+    #start,#pause,#reset{
+        
+        color: white;
+        width:30%;
+        height:5vh;
+        
+        background-image: url("https://as1.ftcdn.net/v2/jpg/08/44/08/24/1000_F_844082486_XZKV40ambtjznuUFBKmBVZl2wbaiZrEY.jpg");
+        margin-top: 5%;
+        cursor: pointer;
+    }
+
+    #pause{
+        background-image: url("https://t3.ftcdn.net/jpg/08/07/00/62/240_F_807006261_5XVUmbGYwgZrwz5IRZFbETJR6fev9hX4.jpg");
+
+    }
+
+    #reset{
+        background-image: url("https://t3.ftcdn.net/jpg/07/16/66/12/240_F_716661222_ETK3AqRTh1p17GVRKcrcSc03jVBYJn4m.jpg");
+    }
+    
+  
+
+</style>
+<body>
+    <div id="container">
+  
+        <div id="timedisplay">00:00:00:000</div>
+ 
+    <div id="buttonbox">
+    <button id="start">start</button>
+    <button id="pause">pause</button>
+    <button id="reset">reset</button>
+    </div>
+</div>
+
+<script>
+let timedisplay=document.querySelector("#timedisplay")
+start=document.getElementById("start")
+pause=document.getElementById("pause")
+reset=document.getElementById("reset")
+
+let milliseconds=0,secs=0,minutes=0,hours=0;
+
+start.addEventListener("click",()=>{
+
+    watch=setInterval(displaytimer,10)
+
+})
+
+
+function displaytimer(){
+    milliseconds+=10;
+    if(milliseconds==1000){
+        milliseconds=0;
+        secs++
+        if(secs==60){
+            secs=0;
+            minutes++;
+            if(minutes==60){
+                minutes=0;
+                hours++
+            }
+        }
+    }
+
+
+h=hours<10? "0"+hours:hours;
+m=minutes<10?"0"+minutes:minutes;
+s=secs<10?"0"+secs:secs;
+ms=milliseconds<10?"00"+milliseconds:milliseconds<100? "0"+milliseconds:milliseconds
+
+
+timedisplay.innerHTML= `${h}:${m}:${s}:${ms}`
+    
+
+}
+
+pause.addEventListener("click",()=>{
+    clearInterval(watch)
+})
+      
+reset.addEventListener("click",()=>{
+    // clearInterval(watch);
+    milliseconds=0;
+    secs=0;
+    minutes=0;
+    hours=0;
+    timedisplay.innerHTML="00:00:00:000"
+})
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
